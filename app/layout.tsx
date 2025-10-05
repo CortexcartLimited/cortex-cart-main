@@ -19,7 +19,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+<Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-JG85N89P8Q"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
+            gtag('config', 'G-JG85N89P8Q');
+          `}
+        </Script>
       <body className={`${inter.className} bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200`}>
      {children}
       </body>
