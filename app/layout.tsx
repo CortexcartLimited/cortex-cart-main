@@ -58,7 +58,7 @@ export default function RootLayout({
       >
         {`
           (function() {
-        const SITE_ID = '9'; // Replace with the actual Site ID for your app's internal tracking
+        const SITE_ID = 'millarsfoods@gmail.com'; // Replace with the actual Site ID for your app's internal tracking
         const API_ENDPOINT = 'https://tracker.cortexcart.com/api/track';
         
         // This function sends the tracking event
