@@ -58,23 +58,47 @@ export default function RootLayout({
       >
         {`
           (function() {
-            const SITE_ID = '9';
-            const API_ENDPOINT = 'https://tracker.cortexcart.com/api/track';
-            
-            function sendEvent(eventName, data = {}) {
-                const eventData = { siteId: SITE_ID, eventName: eventName, data: { ...data, path: window.location.pathname, referrer: document.referrer }};
-                try { 
-                    navigator.sendBeacon(API_ENDPOINT, JSON.stringify(eventData)); 
-                } catch(e) { 
-                    fetch(API_ENDPOINT, { method: 'POST', body: JSON.stringify(eventData), keepalive: true }); 
-                }
+        const SITE_ID = '9'; // Replace with the actual Site ID for your app's internal tracking
+        const API_ENDPOINT = 'https://tracker.cortexcart.com/api/track';
+        
+        // This function sends the tracking event
+        function sendEvent(eventName, data = {}) {
+          const eventData = { 
+            siteId: SITE_ID, 
+            eventName: eventName, 
+            data: { 
+              ...data, 
+              path: window.location.pathname, 
+              referrer: document.referrer 
             }
+          };
+          // Use sendBeacon for reliable background sending, with a fetch fallback
+          try { 
+            navigator.sendBeacon(API_ENDPOINT, JSON.stringify(eventData)); 
+          } catch(e) { 
+            fetch(API_ENDPOINT, { 
+              method: 'POST', 
+              body: JSON.stringify(eventData), 
+              keepalive: true 
+            }); 
+          }
+        }
 
-            document.addEventListener('click', (e) => sendEvent('click', { x: e.pageX, y: e.pageY }), true);
-            
-            window.cortexcart = { track: sendEvent };
-            sendEvent('pageview');
-          })();
+        // Track page views on load
+        sendEvent('pageview');
+
+        // Track clicks
+        document.addEventListener('click', function(e) {
+          sendEvent('click', { 
+            x: e.pageX, 
+            y: e.pageY, 
+            screenWidth: window.innerWidth 
+          });
+        }, true);
+
+        // Make the track function globally available
+        window.cortexcart = { track: sendEvent };
+      })();
         `}
       </Script>
     </html>
