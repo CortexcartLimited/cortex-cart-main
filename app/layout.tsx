@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   other: {
     'facebook-domain-verification': '5jg6zgmfosj3k53rwsnzq13d3cvj4n',
+    'impact-site-verification': 'f992a98d-9b11-4d3b-8ea1-dcb66ed0d193',
   },
 };
 
@@ -52,6 +53,7 @@ export default function RootLayout({
         </noscript>
      {children}
       </body>
+      
          <Script 
         id="cortex-cart-tracker"
         strategy="afterInteractive"
