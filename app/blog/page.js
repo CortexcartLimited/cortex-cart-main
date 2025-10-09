@@ -228,8 +228,20 @@ const filteredPosts = posts.filter(post =>
             </div>
 
             {/* --- This is the blog post list --- */}
+                <Link rel="sponsored"
+           href="https://shopify.pxf.io/c/6589611/2784593/13624" target="_top" id="2784593">
+<Image
+ src="https://a.impactradius-go.com/display-ad/13624-2784593"
+ alt="Shopify Ad"
+ width={1456}
+ height={100}
+ style={{ border: '0', marginTop: '4px'}}
+ />
+</Link>
+<Image height={0} width={0} src="https://imp.pxf.io/i/6589611/2784593/13624" style={{ position: 'absolute', visibility: 'hidden' }} alt="Tracking Pixel" />
+
             <div className="bg-white py-24 sm:py-32">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
 			   {/* --- Search Box --- */}
                     <div className="mb-12 max-w-lg mx-auto">
                         <div className="relative">
