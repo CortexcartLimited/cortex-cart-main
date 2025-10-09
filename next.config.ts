@@ -34,7 +34,17 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'pbs.twimg.com',
         pathname: '/**',
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'a.impactradius-go.com',
+        pathname: '/**',
+      },
+      {
+protocol: 'https',
+hostname: 'imp.pxf.io',
+pathname: '/**',
+      },
     ],
   },
 };
