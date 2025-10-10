@@ -9,7 +9,7 @@ import "./globals.css";
 import React from 'react';
 import Image from 'next/image';
 import { ElementType } from 'react';
-import StripePricingTable from '../components/StripePricingTable'; // Import the new component
+import StripePricingTable from '@/components/StripePricingTable'; // Import the new component
 
 // --- Interfaces for Type Safety ---
 interface CmsContent {
