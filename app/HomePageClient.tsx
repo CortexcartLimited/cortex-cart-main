@@ -1,22 +1,15 @@
-// src/app/HomePageClient.tsx
+// app/HomePageClient.tsx
 'use client';
+
 import Link from 'next/link';
 import {
     ShieldCheckIcon, ChartBarIcon, SparklesIcon, ArrowRightIcon, PuzzlePieceIcon, TableCellsIcon, BeakerIcon
 } from '@heroicons/react/24/outline';
 import "./globals.css";
-// EULA: This file is subject to the terms and conditions defined in EULA.md, which is part of this source code package. #
-//                                                                                                                       #
-//                             No unauthorized Copying, Redistribution either in part or whole                           #
-//                             Redistributing under your own name, refactoring of code to sell                           #
-//                             as your own. This APP/Software is  the exclusive property of                              #
-//                             Cortexcart Insight Dashboard, and Jonathan Service the author.                            #
-//                                                                                                                       #
-//                             Cortexcart Version 0.9.6 Beta Release 6 - www.cortexcart.com                              #
-// #######################################################################################################################
 import React from 'react';
 import Image from 'next/image';
 import { ElementType } from 'react';
+import StripePricingTable from '../components/StripePricingTable'; // Import the new component
 
 // --- Interfaces for Type Safety ---
 interface CmsContent {
@@ -215,12 +208,8 @@ export default function HomePageClient({ content, recentPost }: HomePageClientPr
                             Choose the plan that&apos;s right for your business. Start free, no credit card required.
                         </p>
                     </div>
-                </div>
-                {/* Add the Stripe Pricing Table script and component */}
-                <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-                <stripe-pricing-table pricing-table-id="prctbl_1S6r3LF6XLY4flzw2vZp4OW6"
-                    publishable-key="pk_live_WYJzenOkJZzqDr0BmsGnlddg">
-                </stripe-pricing-table>
+                    </div>
+                 <StripePricingTable />
 
                <p className="mx-auto text-center p-8 bg bg-gray-50 border-gray-80 m-4 rounded">*We are in Beta testing at the moment, while this is happening you can avail of completely free access until January 1st 2026. Get involved and send us feedback on your app and how it has helped your business achieve goals or let us know how to improve core parts of your app by sending us valuable feedback.</p>
             </section>
