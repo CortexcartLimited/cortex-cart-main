@@ -1,4 +1,4 @@
-// app/HomePageClient.tsx
+// src/app/HomePageClient.tsx
 'use client';
 import Link from 'next/link';
 import {
@@ -17,18 +17,6 @@ import "./globals.css";
 import React from 'react';
 import Image from 'next/image';
 import { ElementType } from 'react';
-
-// --- START: Stripe Pricing Table Type Definition ---
-// This tells TypeScript that <stripe-pricing-table> is a valid JSX element.
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'stripe-pricing-table': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
-    }
-  }
-}
-// --- END: Stripe Pricing Table Type Definition ---
-
 
 // --- Interfaces for Type Safety ---
 interface CmsContent {
@@ -227,11 +215,13 @@ export default function HomePageClient({ content, recentPost }: HomePageClientPr
                             Choose the plan that&apos;s right for your business. Start free, no credit card required.
                         </p>
                     </div>
-                    </div>
-<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-<stripe-pricing-table pricing-table-id="prctbl_1S6r3LF6XLY4flzw2vZp4OW6"
-publishable-key="pk_live_WYJzenOkJZzqDr0BmsGnlddg">
-</stripe-pricing-table>
+                </div>
+                {/* Add the Stripe Pricing Table script and component */}
+                <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+                
+                <stripe-pricing-table pricing-table-id="prctbl_1S6r3LF6XLY4flzw2vZp4OW6"
+                    publishable-key="pk_live_WYJzenOkJZzqDr0BmsGnlddg">
+                </stripe-pricing-table>
 
                <p className="mx-auto text-center p-8 bg bg-gray-50 border-gray-80 m-4 rounded">*We are in Beta testing at the moment, while this is happening you can avail of completely free access until January 1st 2026. Get involved and send us feedback on your app and how it has helped your business achieve goals or let us know how to improve core parts of your app by sending us valuable feedback.</p>
             </section>
