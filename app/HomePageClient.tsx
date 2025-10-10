@@ -2,7 +2,7 @@
 'use client';
 import Link from 'next/link';
 import { 
-    ShieldCheckIcon, ChartBarIcon, SparklesIcon, ArrowRightIcon,    PuzzlePieceIcon, TableCellsIcon, BeakerIcon 
+    ShieldCheckIcon, ChartBarIcon, SparklesIcon, ArrowRightIcon, PuzzlePieceIcon, TableCellsIcon, BeakerIcon 
 } from '@heroicons/react/24/outline';
 import "./globals.css";
 // EULA: This file is subject to the terms and conditions defined in EULA.md, which is part of this source code package. #
@@ -12,7 +12,7 @@ import "./globals.css";
 //                             as your own. This APP/Software is  the exclusive property of                              #
 //                             Cortexcart Insight Dashboard, and Jonathan Service the author.                            #
 //                                                                                                                       #
-//                             Cortexcart Version 0.9.3 Beta Release 3 - www.cortexcart.com                              #
+//                             Cortexcart Version 0.9.6 Beta Release 6 - www.cortexcart.com                              #
 // #######################################################################################################################
 import React from 'react';
 import Image from 'next/image';
@@ -158,7 +158,7 @@ export default function HomePageClient({ content, plans, recentPost }: HomePageC
                             </Link>
                         </li>
                         <li>
-                            <Link href="https://tracker.cortexcart.com/login">
+                            <Link href="/#pricing">
                                 <div className="px-6 py-2 text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors cursor-pointer">
                                     Start Free Trial
                                 </div>
@@ -177,7 +177,7 @@ export default function HomePageClient({ content, plans, recentPost }: HomePageC
                         {content?.hero_subtitle || 'Stop guessing. Start growing. CortexCart gives you the actionable insights you need to boost sales.'}
                     </p>
                     <div className="mt-8">
-                        <Link href="https://tracker.cortexcart.com/login">
+                        <Link href="https://cortexcart.com/#pricing">
                            <div className="inline-flex items-center px-8 py-4 text-lg font-semibold text-bluw-700 bg-gray-100 rounded-full hover:bg-blue-700 transition-transform transform hover:scale-105 cursor-pointer">
                                 Get Started for Free <ArrowRightIcon className="h-5 w-5 ml-2" />
                             </div>
@@ -239,10 +239,13 @@ export default function HomePageClient({ content, plans, recentPost }: HomePageC
                             Choose the plan that&apos;s right for your business. Start free, no credit card required.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                        {plans.map(plan => <PricingCard key={plan.name} plan={plan} />)}
                     </div>
-                </div>
+<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+<stripe-pricing-table pricing-table-id="prctbl_1S6r3LF6XLY4flzw2vZp4OW6"
+publishable-key="pk_live_WYJzenOkJZzqDr0BmsGnlddg">
+</stripe-pricing-table>
+                   
+               <p className="mx-auto text-center p-8 bg bg-gray-50 border-gray-80 m-4 rounded">*We are in Beta testing at the moment, while this is happening you can avail of completely free access until January 1st 2026. Get involved and send us feedback on your app and how it has helped your business achieve goals or let us know how to improve core parts of your app by sending us valuable feedback.</p>
             </section>
 
             {/* Scrolling Logo Banner Section */}
@@ -291,6 +294,8 @@ export default function HomePageClient({ content, plans, recentPost }: HomePageC
             <footer className="bg-gray-800 text-white py-8">
                  <div className="container mx-auto px-6 text-center">
                      <div className="mt-4">
+                        <Link href="https://tracker.cortexcart.com/login"><span className="px-3 hover:underline cursor-pointer">My Account</span></Link>
+                        <span className="text-gray-500">|</span>
                         <Link href="pages/about"><span className="px-3 hover:underline cursor-pointer">About</span></Link>
                         <span className="text-gray-500">|</span>
                         <Link href="pages/contact"><span className="px-3 hover:underline cursor-pointer">Contact</span></Link>

@@ -192,7 +192,7 @@ export default function BlogPostLayout({ post, sidebarPosts }) {
                                     </div>
                                 </div>
                             )}
-                        </div>
+                                                           </div>
                     </aside>
                     <div className="lg:col-span-2">
                         <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md">
