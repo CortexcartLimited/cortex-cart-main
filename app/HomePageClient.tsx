@@ -218,7 +218,7 @@ export default function HomePageClient({ content, recentPost }: HomePageClientPr
                 </div>
                 {/* Add the Stripe Pricing Table script and component */}
                 <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-                {/* // @ts-expect-error */}
+               {/* @ts-expect-error - Stripe's custom element is not recognized by JSX */}
                 <stripe-pricing-table pricing-table-id="prctbl_1S6r3LF6XLY4flzw2vZp4OW6"
                     publishable-key="pk_live_WYJzenOkJZzqDr0BmsGnlddg">
                 </stripe-pricing-table>
