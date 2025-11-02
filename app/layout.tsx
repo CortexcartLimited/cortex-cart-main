@@ -20,6 +20,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <>
+        <Script id="nudgify-script">
+          {` (function(w){
+                var k="nudgify",n=w[k]||(w[k]={});
+                n.uuid="d628916d-bfd7-406a-836d-686b700d2210";
+                var d=document,s=d.createElement("script");
+                s.src="https://pixel.nudgify.com/pixel.js";
+                s.async=1;
+                s.charset="utf-8";
+                d.getElementsByTagName("head")[0].appendChild(s)
+            })(window);`}
+        </Script>
+      </>
 <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-JG85N89P8Q"
