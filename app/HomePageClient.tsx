@@ -10,7 +10,8 @@ import React from 'react';
 import Image from 'next/image';
 import { ElementType } from 'react';
 import StripePricingTable from '@/app/components/StripePricingTable'; // Import the new component
-
+import ReviewScroller from '@/app/components/ReviewScroller/ReviewScroller';
+import { reviews } from '@/app/data/reviews';
 // --- Interfaces for Type Safety ---
 interface CmsContent {
     hero_title?: string;
@@ -30,7 +31,19 @@ interface CmsContent {
 }
 
 const trackerUrl = process.env.NEXT_PUBLIC_APP_URL || '/';
-
+const pageStyles = {
+  container: {
+    maxWidth: 'auto',
+    margin: '0 100px',
+    padding: '2rem',
+    fontFamily: 'Arial, sans-serif'
+  },
+  title: {
+    textAlign: 'center',
+    marginBottom: '2rem',
+    color: '#111827'
+  }
+};
 const socialLinks = [
     {
       name: 'Facebook',
@@ -140,7 +153,7 @@ export default function HomePageClient({ content, recentPost }: HomePageClientPr
             <header className="text-center py-20 lg:py-32 bg-blue-700">
                  <div className="container mx-auto px-6">
                     <h1 className="text-4xl lg:text-6xl font-extrabold text-gray-100 leading-tight">
-                        {content?.hero_title || 'The AI-Powered Analytics Dashboard for E-commerce'}
+                        {content?.hero_title || 'The AI-Powered Analytics Dashboard for E-commerce analytics with ai insights and sales optimization'}
                     </h1>
                     <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-100">
                         {content?.hero_subtitle || 'Stop guessing. Start growing. CortexCart gives you the actionable insights you need to boost sales.'}
@@ -199,7 +212,7 @@ export default function HomePageClient({ content, recentPost }: HomePageClientPr
                     </div>
                 </section>
             )}
-
+            
             <section id="pricing" className="py-20">
                  <div className="container mx-auto px-6">
                     <div className="text-center mb-12">

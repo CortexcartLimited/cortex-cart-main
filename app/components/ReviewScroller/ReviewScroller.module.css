@@ -1,0 +1,23 @@
+/* * Styles for the ReviewScroller component 
+ */
+.scroller {
+  display: flex;
+  
+  /* This is the magic! */
+  overflow-x: auto; 
+  
+  gap: 1rem; /* 16px space between cards */
+  padding: 1rem; /* Add some padding so cards don't touch the edge */
+  
+  /* Optional: Makes scrolling smoother on touch devices */
+  -webkit-overflow-scrolling: touch;
+
+  /* Optional: Hides the scrollbar for a cleaner look */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+/* For Chrome, Safari, and Opera */
+.scroller::-webkit-scrollbar {
+  display: none;
+}

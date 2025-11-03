@@ -131,12 +131,17 @@ const socialLinks = [
                                             <p>Responses may take up to 48 hours. For faster help, please try our <a href="/faq" className="font-bold underline">FAQ page</a> or use the live chat feature for instant support.</p>
                                            
                                         </div>
-                                    
-                                    </div>
+                                                                        </div>
+                                                                        
                                 </div>
                             </div>
+                            
                         </div>
+                        <h2 className="font-weight: bold mt-4">Cortexcart Limited</h2>
+                                    <p>3 Nendrum Gardens, County Antrim</p><p>Northern Ireland, UK, BT37 9LR</p>
+                                    <p>+44 7393 975 325</p>
                     </div>
+                    
                     <form onSubmit={handleSubmit} className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
                         <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
                             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">

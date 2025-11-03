@@ -1,0 +1,36 @@
+/* * Styles for the ReviewCard component 
+ */
+.card {
+  /* This is key for the horizontal scroll:
+     It tells the card not to shrink and sets its base width. */
+  flex: 0 0 300px; /* flex-grow: 0, flex-shrink: 0, flex-basis: 300px */
+  
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* 12px */
+  
+  padding: 1.5rem; /* 24px */
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb; /* light grey border */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.text {
+  font-style: italic;
+  color: #374151; /* dark grey text */
+  /* Ensures long text doesn't break the card layout */
+  flex-grow: 1; 
+}
+.title{
+  font-weight: bolder;
+  font-style: normal;
+  color: #000000; /* dark grey text */
+  /* Ensures long text doesn't break the card layout */
+  flex-grow: 2; 
+}
+.author {
+  font-weight: 600; /* semibold */
+  color: #111827; /* almost black text */
+  align-self: flex-end;
+}
