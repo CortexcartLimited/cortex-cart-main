@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Script from 'next/script';
 import MainLayout from '@/app/components/MainLayout';
-import { InformationCircleIcon } from '@heroicons/react/24/outline';
+import { InformationCircleIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 
 export default function ContactPage() {
     const [name, setName] = useState('');
@@ -135,11 +135,23 @@ const socialLinks = [
                                                                         
                                 </div>
                             </div>
-                            
                         </div>
-                        <h2 className="font-weight: bold mt-4">Cortexcart Limited</h2>
-                                    <p>3 Nendrum Gardens, County Antrim</p><p>Northern Ireland, UK, BT37 9LR</p>
-                                    <p>+44 7393 975 325</p>
+                        <div className="mt-10 rounded-md bg-grey-150 p-4">
+                               <div className="flex">
+                                    <div className="flex-shrink-0">
+                                       <EnvelopeIcon className="h-5 w-5 text-blue-400" aria-hidden="true" />
+                                  
+                                    </div>
+                                    <div className="ml-3">
+                        <h2 className="font-bold mt-4">Cortexcart Limited</h2>
+                        <p><span className="font-bold">Head Office:</span> 3 Nendrum Gardens, County Antrim</p><p className="ml-26"><span> </span>Northern Ireland, UK, BT37 9LR</p>
+                        
+                        <p className="mt-5"><span className="font-bold mr-4">Telephone:</span> +44 2895 575 053 (UK)</p>
+                        <p><span className="font-bold mr-9">Support:</span> support@cortexcart.com</p>
+                        <p><span className="font-bold mr-6">Accounts:</span> accounts@cortexcart.com</p>
+                        </div>
+                        </div>
+                        </div>
                     </div>
                     
                     <form onSubmit={handleSubmit} className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
