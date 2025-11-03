@@ -10,8 +10,7 @@ import React from 'react';
 import Image from 'next/image';
 import { ElementType } from 'react';
 import StripePricingTable from '@/app/components/StripePricingTable'; // Import the new component
-import ReviewScroller from '@/app/components/ReviewScroller/ReviewScroller';
-import { reviews } from '@/app/data/reviews';
+
 // --- Interfaces for Type Safety ---
 interface CmsContent {
     hero_title?: string;

@@ -1,9 +1,0 @@
-/* * Styles for the StarRating component 
- */
-.starContainer {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  /* You can change the star color here! */
-  color: #facc15; /* This is a nice "tailwind yellow-500" */
-}
