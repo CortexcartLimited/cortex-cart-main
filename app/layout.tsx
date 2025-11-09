@@ -20,7 +20,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <>
+      <head>
+      <Script type="text/javascript" charSet="UTF-8" src="//cdn.cookie-script.com/s/f7c7a9a04eeb18b85cb5c2eae3bab8d9.js"></Script>
         <Script id="nudgify-script">
           {` (function(w){
                 var k="nudgify",n=w[k]||(w[k]={});
@@ -32,7 +33,7 @@ export default function RootLayout({
                 d.getElementsByTagName("head")[0].appendChild(s)
             })(window);`}
         </Script>
-      </>
+    </head>
 <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-JG85N89P8Q"
