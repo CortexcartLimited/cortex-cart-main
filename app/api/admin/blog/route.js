@@ -29,8 +29,8 @@ export async function POST(req) {
         }
 
         const [result] = await db.query(
-            'INSERT INTO blog_posts (title, content, author, published, imageUrl) VALUES (?, ?, ?, ?, ?)',
-            [title, content, author || 'Admin', published || false, imageUrl || null]
+            'INSERT INTO blog_posts (title, content, author_name, published, imageUrl) VALUES (?, ?, ?, ?, ?)',
+            [title, content, author_name || 'Admin', published || false, imageUrl || null]
         );
 
         return NextResponse.json({ message: 'Blog post created successfully', id: result.insertId }, { status: 201 });
