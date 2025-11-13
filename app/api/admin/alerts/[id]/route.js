@@ -31,8 +31,8 @@ export async function PUT(request, { params }) {
 
 // DELETE handler to remove an alert
 export async function DELETE(request, { params }) {
-    const session = await getServerSession(authOptions);
-    if (session?.user?.role !== 'superadmin') {
+   const adminSession = await verifyAdminSession();
+    if (!adminSession) {
         return NextResponse.json({ message: 'Forbidden' }, { status: 403 });
     }
 

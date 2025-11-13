@@ -29,8 +29,8 @@ export async function GET(request, { params }) {
 // PUT handler to update a plan
 // PUT handler to update a plan
 export async function PUT(request, { params }) {
-    const session = await getServerSession(authOptions);
-    if (session?.user?.role !== 'superadmin') {
+   const adminSession = await verifyAdminSession();
+    if (!adminSession) {
         return NextResponse.json({ message: 'Forbidden' }, { status: 403 });
     }
 
@@ -57,11 +57,10 @@ export async function PUT(request, { params }) {
 }
 // DELETE handler to remove a plan
 export async function DELETE(request, { params }) {
-    const session = await getServerSession(authOptions);
-    if (session?.user?.role !== 'superadmin') {
+    const adminSession = await verifyAdminSession();
+    if (!adminSession) {
         return NextResponse.json({ message: 'Forbidden' }, { status: 403 });
     }
-
     try {
         const { id } = params;
         await db.query('DELETE FROM subscription_plans WHERE id = ?', [id]);

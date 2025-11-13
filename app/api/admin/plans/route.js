@@ -21,8 +21,8 @@ export async function GET() {
 
 // POST handler to create a new subscription plan
 export async function POST(request) {
-    const session = await getServerSession(authOptions);
-    if (session?.user?.role !== 'superadmin') {
+    const adminSession = await verifyAdminSession();
+    if (!adminSession) {
         return NextResponse.json({ message: 'Forbidden' }, { status: 403 });
     }
 

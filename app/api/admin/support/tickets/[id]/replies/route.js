@@ -9,7 +9,7 @@ export async function POST(request, { params }) {
     }
 
     const { id: ticketId } = params;
-    const adminEmail = session.user.email;
+    const adminEmail = adminSession.email;
 
     const connection = await db.getConnection();
     try {
