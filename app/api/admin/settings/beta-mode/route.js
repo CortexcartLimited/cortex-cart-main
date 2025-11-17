@@ -4,6 +4,10 @@ import { NextResponse } from 'next/server';
 
 // GET handler to fetch the current beta mode status
 export async function GET() {
+    const adminSession = await verifyAdminSession();
+    if (!adminSession) {
+        return NextResponse.json({ message: 'Forbidden' }, { status: 403 });
+    }
     try {
         const [rows] = await db.query(
             "SELECT setting_value FROM global_settings WHERE setting_key = 'is_beta_mode_active'"

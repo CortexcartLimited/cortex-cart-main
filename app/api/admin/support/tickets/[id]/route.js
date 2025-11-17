@@ -6,12 +6,10 @@ import { NextResponse } from 'next/server';
 
 // GET a single ticket's details
 export async function GET(request, { params }) {
-    const adminSession = await verifyAdminSession();
+  const adminSession = await verifyAdminSession();
     if (!adminSession) {
         return NextResponse.json({ message: 'Forbidden' }, { status: 403 });
     }
-
-    const { id } = params;
 
     try {
         const connection = await db.getConnection();

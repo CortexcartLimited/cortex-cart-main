@@ -1,8 +1,13 @@
 import { db } from '@/lib/db';
 import { NextResponse } from 'next/server';
+import { verifyAdminSession } from '@/lib/admin-auth'; // Make sure this import is here
 
 // Handles creating a new roadmap feature
 export async function POST(req) {
+    const adminSession = await verifyAdminSession();
+    if (!adminSession) {
+        return new NextResponse(JSON.stringify({ message: "Not Authenticated" }), { status: 401 });
+    }
     try {
         const body = await req.json();
         const { name, description, status } = body;
@@ -28,6 +33,10 @@ export async function POST(req) {
 
 // Handles fetching all roadmap features
 export async function GET() {
+    const adminSession = await verifyAdminSession();
+    if (!adminSession) {
+        return new NextResponse(JSON.stringify({ message: "Not Authenticated" }), { status: 401 });
+    }
     try {
         const [features] = await db.query('SELECT * FROM roadmap_features ORDER BY sort_order ASC');
         return NextResponse.json(features);
