@@ -4,6 +4,10 @@ import { verifyAdminSession } from '@/lib/admin-auth';
 
 // Handles fetching a single blog post by its ID
 export async function GET(req, { params }) {
+    const adminSession = await verifyAdminSession();
+    if (!adminSession) {
+        return new NextResponse(JSON.stringify({ message: "Not Authenticated" }), { status: 401 });
+    }
     try {
         const { id } = params;
         // This query fetches all columns for the post, including 'featured_image_url'.

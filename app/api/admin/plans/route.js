@@ -25,7 +25,6 @@ export async function POST(request) {
     if (!adminSession) {
         return NextResponse.json({ message: 'Forbidden' }, { status: 403 });
     }
-
     try {
         const { name, description, price_monthly, stripe_price_id, visitor_limit, features, is_popular } = await request.json();
         

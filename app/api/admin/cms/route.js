@@ -4,6 +4,10 @@ import { verifyAdminSession } from '@/lib/admin-auth';
 
 // This handles fetching all CMS content as key-value pairs.
 export async function GET() {
+    const session = await verifyAdminSession();
+    if (!session) {
+        return new NextResponse(JSON.stringify({ message: "Not Authenticated" }), { status: 401 });
+    }
     try {
         // This now uses the correct column names: content_key and content_value
         const [rows] = await db.query('SELECT `content_key`, `content_value` FROM cms_content');

@@ -5,6 +5,10 @@ import { NextResponse } from 'next/server';
 // GET handler to fetch all FAQs
 export async function GET() {
     // This route is public for the main site, so no session check is needed here.
+    const adminSession = await verifyAdminSession();
+    if (!adminSession) {
+        return NextResponse.json({ message: 'Forbidden' }, { status: 403 });
+    }
     try {
         const [faqs] = await db.query(
             'SELECT * FROM faqs ORDER BY category, id'

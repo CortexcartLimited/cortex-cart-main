@@ -4,6 +4,10 @@ import { verifyAdminSession } from '@/lib/admin-auth';
 
 // Handles fetching all blog posts
 export async function GET() {
+    const adminSession = await verifyAdminSession();
+    if (!adminSession) {
+        return new NextResponse(JSON.stringify({ message: "Not Authenticated" }), { status: 401 });
+    }
     try {
         const [posts] = await db.query('SELECT * FROM blog_posts ORDER BY created_at DESC');
         return NextResponse.json(posts);
