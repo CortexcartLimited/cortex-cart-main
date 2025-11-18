@@ -39,6 +39,6 @@ export async function POST(req) {
         return NextResponse.json({ message: 'Content updated successfully' }, { status: 200 });
     } catch (error) {
         console.error('[CMS_POST_ERROR]', error);
-        return NextResponse.json({ message: "Internal Server Error" }), { status: 500 };
+       return NextResponse.json({ message: "Internal Server Error" }, { status: 500 }); 
     }
 }
