@@ -2,21 +2,20 @@ import { db } from '@/lib/db';
 import { NextResponse } from 'next/server';
 import { verifyAdminSession } from '@/lib/admin-auth';
 
-// Handles fetching all blog posts
 export async function GET() {
-    const adminSession = await verifyAdminSession();
-    if (!adminSession) {
-        return new NextResponse(JSON.stringify({ message: "Not Authenticated" }), { status: 401 });
+    // Add this check
+    const session = await verifyAdminSession();
+    if (!session) {
+        return NextResponse.json({ message: 'Forbidden' }, { status: 403 });
     }
+
     try {
         const [posts] = await db.query('SELECT * FROM blog_posts ORDER BY created_at DESC');
         return NextResponse.json(posts);
     } catch (error) {
-        console.error('[BLOG_GET_ERROR]', error);
-        return new NextResponse(JSON.stringify({ message: "Internal Server Error" }), { status: 500 });
+        return NextResponse.json({ message: "Internal Server Error" }, { status: 500 });
     }
 }
-
 // Handles creating a new blog post
 export async function POST(req) {
     const session = await verifyAdminSession();
