@@ -222,6 +222,14 @@ export default function HomePageClient({ content, recentPost }: HomePageClientPr
                     </div>
                     </div>
                  <StripePricingTable />
+                 <div className="text-center my-12">
+                     <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">Launch Partners</h2>
+                     <div className="flex justify-center items-center">
+                       
+                        <a href="https://www.producthunt.com/products/cortexcart-insight-dashboard-beta-0-9-6?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-cortexcart&#0045;insight&#0045;dashboard&#0045;beta&#0045;0&#0045;9&#0045;6" target="_blank" rel="noopener noreferrer"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1039956&theme=neutral&t=1763549163573" alt="Cortexcart&#0032;Insight&#0032;Dashboard&#0032;Beta&#0032;0&#0046;9&#0046;6 - Stop&#0032;guessing&#0046;&#0032;Grow&#0032;your&#0032;store&#0032;with&#0032;AI&#0032;insights | Product Hunt" style={{ width: '250px', height: '54px' }} width="250" height="54" /></a>
+                         <a href="https://saasbrowser.com/en/saas/990388/cortexcart"><img src="https://files.saasbrowser.com/4s95cikd4psm7wxl87o8c2ebofvl" alt="CortexCart - SaaS Browser" width="200" height="133" style={{ margin: '20px' }} /></a>
+                     </div>
+                 </div>
 
                <p className="mx-auto text-center p-8 bg bg-gray-50 border-gray-80 m-4 rounded">*We are in Beta testing at the moment, while this is happening you can avail of completely free access until January 1st 2026. Get involved and send us feedback on your app and how it has helped your business achieve goals or let us know how to improve core parts of your app by sending us valuable feedback.</p>
             </section>
@@ -288,6 +296,7 @@ export default function HomePageClient({ content, recentPost }: HomePageClientPr
                     </div>
                     {/* NEW: Social Icons Section */}
                     <div className="flex justify-center space-x-6 mt-4">
+                       
                         {socialLinks.map((item) => (
                             <a key={item.name} href={item.href} className="text-gray-400 hover:text-white">
                             <span className="sr-only">{item.name}</span>
@@ -296,7 +305,14 @@ export default function HomePageClient({ content, recentPost }: HomePageClientPr
                         ))}
                     </div>
                                        <p className="mt-4">&copy; {new Date().getFullYear()} Cortexcart LIMITED Company Number: NI732656. All rights reserved.</p>
-
+ <Image 
+                        src="/logos/Powered by Stripe - white.svg" 
+                        alt="Powered by Stripe Badge"
+                        width={200} // Adjust width as needed
+                        height={100} // Adjust height as needed
+                        className="mx-4"
+                          
+                        />
                 </div>
             </footer>
         </div>

@@ -70,6 +70,7 @@ const FooterBase = () => {
 
                       {/* NEW: Social Icons Section */}
                     <div className="flex justify-center space-x-6 mt-4">
+                        
                         {socialLinks.map((item) => (
                             <a key={item.name} href={item.href} className="text-gray-400 hover:text-white">
                             <span className="sr-only">{item.name}</span>

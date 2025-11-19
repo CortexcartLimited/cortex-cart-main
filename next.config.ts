@@ -12,6 +12,16 @@ const nextConfig: NextConfig = {
         pathname: '/images/**',
       },
       {
+        protocol: 'https',
+        hostname: 'static-files.saasbrowser.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'newschannelnebraska.com',
+        pathname: '/**',
+      },
+      {
       protocol: 'https',
       hostname: 'scontent-man2-1.xx.fbcdn.net',
       },
