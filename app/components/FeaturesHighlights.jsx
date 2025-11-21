@@ -99,7 +99,7 @@ const FeatureHighlights = () => {
           <div className="mt-10 lg:mt-0 relative">
              {/* REPLACE THIS DIV WITH YOUR IMAGE */}
             <div className="bg-white rounded-2xl shadow-xl border border-gray-200 aspect-video flex items-center justify-center overflow-hidden">
-               <span className="text-gray-400 font-medium"><Image src="/images/screenshots/ab testing screenshot.png" alt="A/B Testing Screenshot"  width={1000} height={600} className="rounded-lg object-cover" /></span>
+               <span className="text-gray-400 font-medium"><Image src="/images/screenshots/ab testing screenshot.png" alt="A/B Testing Screenshot" width={1000} height={600} className="rounded-lg object-cover" /></span>
             </div>
           </div>
         </div>
