@@ -24,10 +24,10 @@ const ProblemSolution = () => {
           <div className="relative p-8 bg-gray-50 rounded-2xl border border-gray-100">
             <div className="absolute -top-6 left-8 bg-red-100 p-3 rounded-xl">
               <ChartDownIcon className="w-8 h-8 text-red-600" />
-            </div>ProblemSolution.jsx:14:48: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`. (react/no-unescaped-entities)
+            </div>
             <h3 className="mt-6 text-xl font-bold text-gray-900">The &quot;Why&quot; Gap</h3>
-            <p className="mt-2 text-gray-600">ProblemSolution.jsx:17:95: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`. (react/no-unescaped-entities)
-              You see traffic going up but sales going down. Google Analytics shows you charts, but it doesn&apos;t tell you <em>why</em> it&apos;s happening.
+            <p className="mt-2 text-gray-600">
+              You see traffic going up but sales going down. Google Analytics shows you charts, but it doesn't tell you <em>why</em> it's happening.
             </p>
           </div>
 
@@ -35,9 +35,9 @@ const ProblemSolution = () => {
           <div className="relative p-8 bg-gray-50 rounded-2xl border border-gray-100">
             <div className="absolute -top-6 left-8 bg-orange-100 p-3 rounded-xl">
               <SpreadsheetIcon className="w-8 h-8 text-orange-600" />
-            </div>ProblemSolution.jsx:28:70: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`. (react/no-unescaped-entities)
-            <h3 className="mt-6 text-xl font-bold text-gray-900">Spreadsheet Hell</h3>ProblemSolution.jsx:28:74: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`. (react/no-unescaped-entities)
-            <p className="mt-2 text-gray-600">ProblemSolution.jsx:30:109: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`. (react/no-unescaped-entities)
+            </div>
+            <h3 className="mt-6 text-xl font-bold text-gray-900">Spreadsheet Hell</h3>
+            <p className="mt-2 text-gray-600">
               Wasting hours every week exporting CSVs from 4 different platforms just to create a report that is outdated by the time you finish.
             </p>
           </div>
@@ -46,10 +46,10 @@ const ProblemSolution = () => {
           <div className="relative p-8 bg-gray-50 rounded-2xl border border-gray-100">
             <div className="absolute -top-6 left-8 bg-yellow-100 p-3 rounded-xl">
               <MoneyIcon className="w-8 h-8 text-yellow-600" />
-            </div>ProblemSolution.jsx:36:48: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`. (react/no-unescaped-entities)
-            <h3 className="mt-6 text-xl font-bold text-gray-900">Ad Burn</h3>ProblemSolution.jsx:36:51: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`. (react/no-unescaped-entities)
-            <p className="mt-2 text-gray-600">ProblemSolution.jsx:39:109: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`. (react/no-unescaped-entities)
-              Scaling ads that aren&apos;t converting because you don&apos;t have a clear view of your customer&apos;s true journey or LTV.
+            </div>
+            <h3 className="mt-6 text-xl font-bold text-gray-900">Ad Burn</h3>
+            <p className="mt-2 text-gray-600">
+              Scaling ads that aren't converting because you don't have a clear view of your customer's true journey or LTV.
             </p>
           </div>
         </div>
@@ -61,7 +61,7 @@ const ProblemSolution = () => {
           </div>
           <div className="relative flex justify-center">
             <span className="px-4 bg-white text-lg font-medium text-gray-500">
-              It&apos;s time to stop guessing
+              It's time to stop guessing
             </span>
           </div>
         </div>
