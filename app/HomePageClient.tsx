@@ -10,6 +10,9 @@ import React from 'react';
 import Image from 'next/image';
 import { ElementType } from 'react';
 import StripePricingTable from '@/app/components/StripePricingTable'; // Import the new component
+import ComparisonTable from '@/app/components/ComparisonTable'; 
+import ProblemSolution from '@/app/components/ProblemSolution'; 
+import FeatureHighlights from '@/app/components/FeaturesHighlights'; 
 
 // --- Interfaces for Type Safety ---
 interface CmsContent {
@@ -183,9 +186,36 @@ export default function HomePageClient({ content, recentPost }: HomePageClientPr
                     </div>
                 </div>
             </section>
-
-            {recentPost && (
-                 <section id="from-the-blog" className="py-20 bg-gray-50">
+<div className="text-center my-12 bg-gray-50 p-4">
+                     <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">Launch Partners</h2>
+                     <div className="flex justify-center items-center">
+                       
+                        <a href="https://www.producthunt.com/products/cortexcart-insight-dashboard-beta-0-9-6?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-cortexcart&#0045;insight&#0045;dashboard&#0045;beta&#0045;0&#0045;9&#0045;6" target="_blank" rel="noopener noreferrer"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1039956&theme=neutral&t=1763549163573" alt="Cortexcart&#0032;Insight&#0032;Dashboard&#0032;Beta&#0032;0&#0046;9&#0046;6 - Stop&#0032;guessing&#0046;&#0032;Grow&#0032;your&#0032;store&#0032;with&#0032;AI&#0032;insights | Product Hunt" style={{ width: '250px', height: '54px' }} width="250" height="54" /></a>
+                         <a href="https://saasbrowser.com/en/saas/990388/cortexcart"><img src="https://files.saasbrowser.com/4s95cikd4psm7wxl87o8c2ebofvl" alt="CortexCart - SaaS Browser" width="200" height="133" style={{ margin: '20px' }} /></a>
+                     <a href="https://nxgntools.com/tools/cortexcart-insight-dashboard" target="_blank" rel="noopener" style={{ display: 'inline-block', width: 'auto' }}>
+    <img src="https://nxgntools.com/api/embed/cortexcart-insight-dashboard?type=FEATURED_ON&hideUpvotes=true" alt="NextGen Tools Badge" style={{ height: '48px', width: 'auto' }} />
+</a>
+                     </div>
+                 </div>
+            
+            <ProblemSolution />
+            <FeatureHighlights />
+           
+                 
+<ComparisonTable />
+ <section id="pricing" className="py-20">
+                 <div className="container mx-auto px-6">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Simple, Transparent Pricing</h2>
+                        <p className="mt-4 max-w-2xl mx-auto text-gray-600">
+                            Choose the plan that&apos;s right for your business. Start free, no credit card required.
+                        </p>
+                    </div>
+                    </div>
+                 <StripePricingTable />
+             </section>
+{recentPost && (
+                 <section id="from-the-blog" className="py-2 mb-4">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">From the Blog</h2>
@@ -211,29 +241,6 @@ export default function HomePageClient({ content, recentPost }: HomePageClientPr
                     </div>
                 </section>
             )}
-            
-            <section id="pricing" className="py-20">
-                 <div className="container mx-auto px-6">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Simple, Transparent Pricing</h2>
-                        <p className="mt-4 max-w-2xl mx-auto text-gray-600">
-                            Choose the plan that&apos;s right for your business. Start free, no credit card required.
-                        </p>
-                    </div>
-                    </div>
-                 <StripePricingTable />
-                 <div className="text-center my-12">
-                     <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">Launch Partners</h2>
-                     <div className="flex justify-center items-center">
-                       
-                        <a href="https://www.producthunt.com/products/cortexcart-insight-dashboard-beta-0-9-6?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-cortexcart&#0045;insight&#0045;dashboard&#0045;beta&#0045;0&#0045;9&#0045;6" target="_blank" rel="noopener noreferrer"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1039956&theme=neutral&t=1763549163573" alt="Cortexcart&#0032;Insight&#0032;Dashboard&#0032;Beta&#0032;0&#0046;9&#0046;6 - Stop&#0032;guessing&#0046;&#0032;Grow&#0032;your&#0032;store&#0032;with&#0032;AI&#0032;insights | Product Hunt" style={{ width: '250px', height: '54px' }} width="250" height="54" /></a>
-                         <a href="https://saasbrowser.com/en/saas/990388/cortexcart"><img src="https://files.saasbrowser.com/4s95cikd4psm7wxl87o8c2ebofvl" alt="CortexCart - SaaS Browser" width="200" height="133" style={{ margin: '20px' }} /></a>
-                     </div>
-                 </div>
-
-               <p className="mx-auto text-center p-8 bg bg-gray-50 border-gray-80 m-4 rounded">*We are in Beta testing at the moment, while this is happening you can avail of completely free access until January 1st 2026. Get involved and send us feedback on your app and how it has helped your business achieve goals or let us know how to improve core parts of your app by sending us valuable feedback.</p>
-            </section>
-
             {/* Scrolling Logo Banner Section */}
             <section className="py-12 bg-gray-100 overflow-hidden">
                 <div className="container mx-auto px-6">
