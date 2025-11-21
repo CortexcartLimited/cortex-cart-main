@@ -184,9 +184,9 @@ const ComparisonTable = () => {
         <div className="mt-8 max-w-3xl mx-auto text-center">
           <div className="bg-gray-900 rounded-xl p-6 shadow-lg">
             <h3 className="text-blue-400 font-bold uppercase tracking-widest text-sm mb-2">The Verdict</h3>
-            <p className="text-white text-lg leading-relaxed">ProblemSolution.jsx:28:70: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`. (react/no-unescaped-entities)
-              "Google Analytics tells you <em>what</em> happened. Triple Whale tells you <em>which ad</em> worked. <br className="hidden sm:block" />
-              <span className="text-blue-200 font-bold">Cortex Cart tells you how to fix your store and grow revenue.</span>"
+            <p className="text-white text-lg leading-relaxed">
+              &quot;Google Analytics tells you <em>what</em> happened. Triple Whale tells you <em>which ad</em> worked. <br className="hidden sm:block" />
+              <span className="text-blue-200 font-bold">Cortex Cart tells you how to fix your store and grow revenue.</span>&quot;
             </p>
           </div>
         </div>

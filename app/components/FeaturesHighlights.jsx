@@ -60,7 +60,7 @@ const FeatureHighlights = () => {
               <span className="text-purple-600">AI Data Analyst.</span>
             </h3>
             <p className="mt-4 text-lg text-gray-500">
-              Cortex Cart doesn't just show you the chart; it reads it. Our AI analyzes your trends and gives you plain-English recommendations on how to improve conversions and fix leaks in your funnel.
+              Cortex Cart doesn&apos;t just show you the chart; it reads it. Our AI analyzes your trends and gives you plain-English recommendations on how to improve conversions and fix leaks in your funnel.
             </p>
             <dl className="mt-8 space-y-4">
               <div className="flex items-center">
@@ -79,7 +79,7 @@ const FeatureHighlights = () => {
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
           <div className="relative">
             <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
-              Test, don't guess. <br />
+              Test, don&apos;t guess. <br />
               <span className="text-blue-600">Built-in A/B Testing.</span>
             </h3>
             <p className="mt-4 text-lg text-gray-500">

@@ -11,10 +11,10 @@ const ProblemSolution = () => {
             The Problem
           </h2>
           <p className="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Running an e-commerce store shouldn't feel like gambling.
+            Running an e-commerce store shouldn&apos;t feel like gambling.
           </p>
           <p className="mt-4 text-lg text-gray-500">
-            You have data everywhere—Shopify, Facebook Ads, Google Analytics—but you still don't know why sales are dropping.
+            You have data everywhere—Shopify, Facebook Ads, Google Analytics—but you still don&apos;t know why sales are dropping.
           </p>
         </div>
 
@@ -27,7 +27,7 @@ const ProblemSolution = () => {
             </div>
             <h3 className="mt-6 text-xl font-bold text-gray-900">The &quot;Why&quot; Gap</h3>
             <p className="mt-2 text-gray-600">
-              You see traffic going up but sales going down. Google Analytics shows you charts, but it doesn't tell you <em>why</em> it's happening.
+              You see traffic going up but sales going down. Google Analytics shows you charts, but it doesn&apos;t tell you <em>why</em> it&apos;s happening.
             </p>
           </div>
 
@@ -49,7 +49,7 @@ const ProblemSolution = () => {
             </div>
             <h3 className="mt-6 text-xl font-bold text-gray-900">Ad Burn</h3>
             <p className="mt-2 text-gray-600">
-              Scaling ads that aren't converting because you don't have a clear view of your customer's true journey or LTV.
+              Scaling ads that aren&apos;t converting because you don&apos;t have a clear view of your customer&apos;s true journey or LTV.
             </p>
           </div>
         </div>
@@ -61,7 +61,7 @@ const ProblemSolution = () => {
           </div>
           <div className="relative flex justify-center">
             <span className="px-4 bg-white text-lg font-medium text-gray-500">
-              It's time to stop guessing
+              It&apos;s time to stop guessing
             </span>
           </div>
         </div>
