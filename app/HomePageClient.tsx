@@ -13,6 +13,7 @@ import StripePricingTable from '@/app/components/StripePricingTable'; // Import 
 import ComparisonTable from '@/app/components/ComparisonTable'; 
 import ProblemSolution from '@/app/components/ProblemSolution'; 
 import FeatureHighlights from '@/app/components/FeaturesHighlights'; 
+import NewsletterSignup from '@/app/components/NewsletterSignup'; 
 
 // --- Interfaces for Type Safety ---
 interface CmsContent {
@@ -203,6 +204,7 @@ export default function HomePageClient({ content, recentPost }: HomePageClientPr
            
                  
 <ComparisonTable />
+<NewsletterSignup />
  <section id="pricing" className="py-20">
                  <div className="container mx-auto px-6">
                     <div className="text-center mb-12">
