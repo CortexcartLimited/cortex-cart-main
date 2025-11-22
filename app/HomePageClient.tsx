@@ -202,7 +202,8 @@ export default function HomePageClient({ content, recentPost }: HomePageClientPr
         alt="TinyLaunch Badge"
         style={{
             width: 202,
-            height: 'auto'
+            height: 'auto',
+            margin: '20px'
         }}
     />
 </a>
