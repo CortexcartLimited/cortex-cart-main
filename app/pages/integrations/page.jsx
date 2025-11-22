@@ -155,7 +155,7 @@ export default function IntegrationsPage() {
                     </div>
                 </div>
  <div className="mt-6 text-center">
-                                            <Link href="https://tracker.cortexcart.com/#pricing">
+                                            <Link href="https://cortexcart.com/#pricing">
                                                 <div className="inline-block px-8 py-3 text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors cursor-pointer text-lg font-semibold">
                                                     Start Free Trial
                                                 </div>

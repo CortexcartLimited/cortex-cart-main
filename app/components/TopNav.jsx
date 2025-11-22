@@ -26,7 +26,7 @@ const TopNav = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="https://tracker.cortexcart.com/#pricing">
+                            <Link href="https://cortexcart.com/#pricing">
                                 <div className="px-6 py-2 text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors cursor-pointer">
                                     Start Free Trial
                                 </div>
