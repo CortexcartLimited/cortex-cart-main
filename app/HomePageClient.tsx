@@ -196,6 +196,16 @@ export default function HomePageClient({ content, recentPost }: HomePageClientPr
                      <a href="https://nxgntools.com/tools/cortexcart-insight-dashboard" target="_blank" rel="noopener" style={{ display: 'inline-block', width: 'auto' }}>
     <img src="https://nxgntools.com/api/embed/cortexcart-insight-dashboard?type=FEATURED_ON&hideUpvotes=true" alt="NextGen Tools Badge" style={{ height: '48px', width: 'auto' }} />
 </a>
+<a href="https://tinylaunch.com" target="_blank" rel="noopener">
+    <img 
+        src="https://tinylaunch.com/tinylaunch_badge_launching_soon.svg"
+        alt="TinyLaunch Badge"
+        style={{
+            width: 202,
+            height: 'auto'
+        }}
+    />
+</a>
                      </div>
                  </div>
             
