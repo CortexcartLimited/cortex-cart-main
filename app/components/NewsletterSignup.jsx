@@ -14,9 +14,12 @@ const NewsletterSignup = () => {
         
         {/* Simple Form */}
         <form 
-          action="YOUR_MAILCHIMP_FORM_ACTION_URL" 
+          action="https://hotmail.us10.list-manage.com/subscribe/post?u=2a4f0a325428c7bbf43e861d4&amp;id=695c1615c7&amp;f_id=002f5ae2f0" 
           method="POST"
+          id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
           className="mt-8 sm:flex justify-center"
+          class="validate" 
+          target="_blank"
         >
           <label htmlFor="email-address" className="sr-only">Email address</label>
           <input
