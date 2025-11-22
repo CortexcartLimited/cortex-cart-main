@@ -28,7 +28,7 @@ const NewsletterSignup = () => {
             type="email"
             autoComplete="email"
             required
-            className="w-full px-5 py-3 placeholder-gray-500 focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-700 focus:ring-white focus:border-white sm:max-w-xs rounded-md border-transparent"
+            className="w-full px-5 py-3 placeholder-gray-100 text-gray-50 focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-700 focus:ring-white focus:border-white sm:max-w-xs rounded-md border-transparent"
             placeholder="Enter your email"
           />
           <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
